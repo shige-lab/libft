@@ -8,6 +8,7 @@ SRCS = ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strrchr.c ft_strnstr.c ft_strncm
 		ft_tolower.c ft_calloc.c ft_strchr.c ft_strdup.c ft_substr.c ft_strjoin.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 		ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c get_next_line.c ft_itoa_dx.c \
+		ft_atoi_simple.c \
 		ft_printf/ft_printf.c\
 		ft_printf/print_c.c\
 		ft_printf/print_d.c\
