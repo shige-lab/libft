@@ -6,7 +6,7 @@
 /*   By: tshigena <tshigena@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:37:16 by tshigena          #+#    #+#             */
-/*   Updated: 2021/12/01 14:17:33 by tshigena         ###   ########.fr       */
+/*   Updated: 2021/12/01 14:26:48 by tshigena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,11 @@ int	ft_atoi_simple(const char *str)
 		if (checknum == 0)
 			break ;
 		if (checknum == -1)
+		{
+			if (number * minus_flag == INT_MIN)
+				return (INT_MIN);
 			return (0);
+		}
 		i++;
 	}
 	number *= minus_flag;
