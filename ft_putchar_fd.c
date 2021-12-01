@@ -6,7 +6,7 @@
 /*   By: tshigena <tshigena@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:40:22 by tshigena          #+#    #+#             */
-/*   Updated: 2021/11/07 23:38:37 by tshigena         ###   ########.fr       */
+/*   Updated: 2021/12/01 14:30:37 by tshigena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-

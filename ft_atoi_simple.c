@@ -6,7 +6,7 @@
 /*   By: tshigena <tshigena@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:37:16 by tshigena          #+#    #+#             */
-/*   Updated: 2021/12/01 14:26:48 by tshigena         ###   ########.fr       */
+/*   Updated: 2021/12/01 14:36:56 by tshigena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,9 @@ static int	insert_to_str(const char str, long *number)
 {
 	if (ft_isdigit(str))
 	{
-		if ((*number * 10) + (str - '0') - INT_MAX > 0)
+		*number = (*number * 10) + (str - '0');
+		if (*number - INT_MAX > 0)
 			return (-1);
-		else
-			*number = (*number * 10) + (str - '0');
 		return (1);
 	}
 	return (0);
