@@ -6,7 +6,7 @@
 /*   By: tshigena <tshigena@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:37:16 by tshigena          #+#    #+#             */
-/*   Updated: 2021/12/01 14:10:38 by tshigena         ###   ########.fr       */
+/*   Updated: 2021/12/01 14:17:33 by tshigena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	check_sign(const char *str, size_t *i);
 static int	insert_to_str(const char str, long *number);
 
-int	ft_atoi(const char *str)
+int	ft_atoi_simple(const char *str)
 {
 	size_t	i;
 	int		minus_flag;
