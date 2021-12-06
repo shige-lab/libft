@@ -6,7 +6,7 @@
 /*   By: tshigena <tshigena@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 22:54:12 by tshigena          #+#    #+#             */
-/*   Updated: 2021/12/01 13:46:01 by tshigena         ###   ########.fr       */
+/*   Updated: 2021/12/07 00:44:13 by tshigena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	ft_printf(const char *format, ...)
 	va_start(ap, format);
 	while (format[i] && str_lens >= 0)
 	{
+		if (format[i] == '%' && format[i + 1] == '\0')
+			break ;
 		if (format[i] == '%' && ft_strchr("cspdiuxX%", format[i + 1]))
 		{
 			str_lens = is_overflow(str_lens, select_format(format[i + 1], ap));
