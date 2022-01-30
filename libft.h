@@ -6,7 +6,7 @@
 /*   By: tshigena <tshigena@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 18:13:47 by tshigena          #+#    #+#             */
-/*   Updated: 2022/01/11 16:55:14 by tshigena         ###   ########.fr       */
+/*   Updated: 2022/01/30 23:40:32 by tshigena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdbool.h>
+# include <limits.h>
+# include <errno.h>
 # include "ft_printf/ft_printf.h"
 
 typedef struct s_list
@@ -74,8 +76,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 char	*get_next_line(int fd);
 int		ft_atoi_simple(const char *str);
 char	*ft_itoa_dx(unsigned long long n, int base);
-char	*ft_strjoin_with_free(char **s1, char **s2);
-char	*ft_strjoin_with_free_no_null(char *s1, char *s2);
+char	*strjoin_and_free_null(char **s1, char **s2);
+char	*strjoin_and_free(char *s1, char *s2);
 char	***ft_split_triple(char const **strs, char *sets);
+int		ft_strcmp(const char*s1, const char *s2);
+void	ft_free(void **p1, void **p2);
+bool	is_str_all_c(char *str, char c);
+bool	is_last_char_c(char *str, char c);
 
 #endif

@@ -19,9 +19,13 @@ SRCS = ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strrchr.c ft_strnstr.c ft_strncm
 		ft_printf/print_p.c\
 		ft_printf/print_xX.c\
 		ft_printf/put_num_dx.c\
-		ft_strjoin_with_free.c \
-		ft_strjoin_with_free_no_null.c \
-		ft_split_triple.c
+		strjoin_and_free_null.c \
+		strjoin_and_free.c \
+		ft_split_triple.c \
+		ft_strcmp.c \
+		ft_free.c \
+		is_str_all_c.c \
+		is_last_char_c.c
 OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)

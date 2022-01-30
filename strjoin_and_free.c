@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_with_free.c                             :+:      :+:    :+:   */
+/*   strjoin_and_free_null.c                             :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tshigena <tshigena@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,24 +12,22 @@
 
 #include "libft.h"
 
-char	*ft_strjoin_with_free(char **s1, char **s2)
+char	*strjoin_and_free(char *s1, char *s2)
 {
 	char	*total;
 	size_t	len;
 
-	if (!s1 || !s2 || !*s1 || !*s2)
+	if (!s1 || !s2)
 		return (NULL);
-	len = ft_strlen(*s1) + ft_strlen(*s2);
+	len = ft_strlen(s1) + ft_strlen(s2);
 	total = (char *)malloc((len + 1) * sizeof(char));
 	if (total)
 	{
-		ft_strlcpy(total, *s1, ft_strlen(*s1) + 1);
-		ft_strlcat(total, *s2, len + 1);
+		ft_strlcpy(total, s1, ft_strlen(s1) + 1);
+		ft_strlcat(total, s2, len + 1);
 	}
-	free(*s1);
-	*s1 = NULL;
-	free(*s2);
-	*s2 = NULL;
+	free(s1);
+	free(s2);
 	if (total == NULL)
 		return (NULL);
 	return (total);
