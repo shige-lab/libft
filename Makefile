@@ -25,7 +25,9 @@ SRCS = ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strrchr.c ft_strnstr.c ft_strncm
 		ft_strcmp.c \
 		ft_free.c \
 		is_str_all_c.c \
-		is_last_char_c.c
+		is_last_char_c.c \
+		is_str_int_by_atoi.c \
+		is_str_unsigned_num_by_atoi.c
 OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
